@@ -67,3 +67,11 @@ You can use Jenkins, now 🎉
 
 ![Jenkins Main Page](./assets/ss-3.png)
 
+## Problem
+
+Installing Jenkins requires so many manual steps, it's not so easy to automate to ready a Jenkins machine.
+
+Also, you need to prepare a machine to install Jenkins. It's your responsibility to make this machine up and running all the time.
+
+So, you need to take care of backup and restore plans, you need to plan for disaster scenarios, etc.
+
