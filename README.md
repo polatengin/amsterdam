@@ -75,3 +75,18 @@ Also, you need to prepare a machine to install Jenkins. It's your responsibility
 
 So, you need to take care of backup and restore plans, you need to plan for disaster scenarios, etc.
 
+## References
+
+* [Jenkins](https://jenkins.io/)
+
+* [Jenkins User Documentation](https://jenkins.io/doc/)
+
+* [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/)
+
+* [OpenJDK](https://openjdk.java.net/install/)
+
+* [Debian Jenkins Packages](https://pkg.jenkins.io/debian/)
+
+* [Jenkins Cheat Sheet](https://www.edureka.co/blog/cheatsheets/jenkins-cheat-sheet/)
+
+* [OpenShift Pipelines with Jenkins Blue Ocean](https://www.openshift.com/blog/openshift-pipelines-jenkins-blue-ocean)
