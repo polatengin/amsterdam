@@ -27,8 +27,8 @@ _Jenkins Documentation_ can be found on [Jenkins User Documentation](https://jen
 * Make sure that system has [Java JDK](https://openjdk.java.net/install/) on it
 
 ```bash
-$ sudo apt update
-$ sudo apt install openjdk-8-jdk
+sudo apt update
+sudo apt install openjdk-8-jdk
 ```
 
 * Add Jenkins Repository
