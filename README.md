@@ -22,3 +22,48 @@ _Jenkins Documentation_ can be found on [Jenkins User Documentation](https://jen
 
 * Jenkins is an open-source CI tool completely compiled and written in Java that originated as a subsidiary of Oracle created by Sun Microsystems.
 
+## Installing Jenkins on an existing Ubuntu machine
+
+* Make sure that system has [Java JDK](https://openjdk.java.net/install/) on it
+
+```bash
+$ sudo apt update
+$ sudo apt install openjdk-8-jdk
+```
+
+* Add Jenkins Repository
+
+```bash
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add –
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+```
+
+* Install Jenkins
+
+```bash
+sudo apt install jenkins
+```
+
+Jenkins will run on [http://localhost:8080](http://localhost:8080)
+
+![Jenkins is getting ready to work](./assets/ss-0.png)
+
+After few seconds, Jenkins will be redirected to _Getting Started_ page and wait for user to enter initial administrator password.
+
+![Jenkins getting started](./assets/ss-1.png)
+
+After unlocking Jenkins, it requires to select plugin set to install. Jenkins can be installed with pre-defined set of plugins, or, you can select which plugins you want to install with Jenkins.
+
+Installation usually take couple of minutes.
+
+![Jenkins installation](./assets/ss-2.gif)
+
+After installation done, Jenkins will redirect to _Main Page_
+
+Boom! 💣 It's done!
+
+You can use Jenkins, now 🎉
+
+![Jenkins Main Page](./assets/ss-3.png)
+
