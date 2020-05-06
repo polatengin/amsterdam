@@ -169,6 +169,65 @@ Also we need to utilize Monitoring solution and Load Balancer type mechanism to 
 
 _Azure Container Instances_ _may_ solve availability and high availability problems at once.
 
+## Guideline to Install Jenkins on Azure Container Instances
+
+After creating a custom _Jenkins_ Docker image on your machine (you can follow guideline on [Guideline to build custom Jenkins image and run it on your machine](#guideline-to-build-custom-jenkins-image-and-run-it-on-your-machine)) it's time to push Docker image to Azure Container Registry and run it on Azure Container Instances.
+
+So, steps are;
+
+* Push custom Jenkins Docker Image to Azure Container Registry
+
+* Create an Azure Container Instance based on the custom Jenkins Docker Image from the Azure Container Registry
+
+It the end, you'll have a Jenkins instance running on Azure Container Instances.
+
+* Create the Azure Resource Group first;
+
+```bash
+az group create --location westeurope --name amsterdamrg
+```
+
+* We can create Azure Container Registry in the Resource Group now;
+
+```bash
+az acr create --resource-group amsterdamrg --name amsterdamacr --sku basic --admin-enabled true
+```
+
+* We need to get credentials to push a Docker image to Azure Container Registry
+
+```bash
+USERNAME=`az acr credential show --resource-group amsterdamrg --name amsterdamacr --query username -o tsv`
+PASSWORD=`az acr credential show --resource-group amsterdamrg --name amsterdamacr --query passwords[0].value -o tsv`
+```
+
+* [Optional] We can use already built image from [Guideline to build custom Jenkins image and run it on your machine](#guideline-to-build-custom-jenkins-image-and-run-it-on-your-machine) _or_ we can build Jenkins image here, with Azure Container Registry Build Docker Image service;
+
+```bash
+az acr build --image jenkins:latest --registry amsterdamacr --file ./src/Dockerfile .
+```
+
+* Last (_but not least_) we need to create an _Azure Container Instance_ from _Jenkins_ image in the _Azure Container Registry_
+
+```bash
+FQDN=`az container create \
+  --name "amsterdamjenkins" \
+  --resource-group amsterdamrg \
+  --image "amsterdamacr.azurecr.io/jenkins:latest" \
+  --registry-login-server "$USERNAME.azurecr.io" \
+  --registry-username $USERNAME \
+  --registry-password $PASSWORD \
+  --dns-name-label "amsterdamjenkins" \
+  --port 8080 \
+  --query ipAddress.fqdn \
+  --output tsv`
+```
+
+* Now we can print url of the newly created _Jenkins_ instance on _Azure Container Instances_ to _Terminal_
+
+```bash
+echo "You can click http://$FQDN:8080 to launch Jenkins interface on your browser"
+```
+
 ## References
 
 * [Jenkins](https://jenkins.io/)
