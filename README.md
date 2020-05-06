@@ -85,11 +85,7 @@ The following guideline will help you to;
 
 * Build a custom _Docker Image_ for Jenkins which has plugins you want to use
 
-* Push custom Jenkins Docker Image to Azure Container Registry
-
-* Create an Azure Container Instance based on the custom Jenkins Docker Image from the Azure Container Registry
-
-It the end, you'll have a Jenkins instance running on Azure Container Instances.
+It the end, you'll have a Jenkins instance running on you local machine.
 
 Let's start;
 
