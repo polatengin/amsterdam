@@ -1,6 +1,12 @@
 # Run Jenkins on Azure Container Instances
 
-With this guideline, you can deploy and run [Jenkins](https://jenkins.io/) on [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/).
+With this guideline, you can deploy and run [Jenkins](https://jenkins.io/) on your local machine as well as on [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/).
+
+* [Installing Jenkins on an existing Ubuntu machine](#installing-jenkins-on-an-existing-ubuntu-machine)
+
+* [Guideline to build custom Jenkins image and run it on your machine](#guideline-to-build-custom-jenkins-image-and-run-it-on-your-machine)
+
+* [Installing Jenkins on Azure Container Instances](#installing-jenkins-on-azure-container-instances)
 
 ## Jenkins
 
