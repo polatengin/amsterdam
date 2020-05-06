@@ -79,7 +79,7 @@ Also, you need to prepare a machine to install Jenkins. It's your responsibility
 
 So, you need to take care of backup and restore plans, you need to plan for disaster scenarios, etc.
 
-## Guideline
+## Guideline to build custom Jenkins image and run it on your machine
 
 The following guideline will help you to;
 
