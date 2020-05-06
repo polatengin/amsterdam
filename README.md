@@ -163,13 +163,13 @@ You should see _Jenkins Main Page_, but this time from _Docker Container_.
 
 ## Going to Azure
 
-Now we have a running Jenkins installation on our machines, thanks to custom Jenkins image and Docker. But it's not highly available, it's not availabe at all, for most of the cases.
+Now we have a running Jenkins installation on our machines, thanks to custom Jenkins image and Docker. But it's not highly available, it's not available at all, for most of the cases.
 
 Having a virtual machine somewhere (probably on cloud) solve availability but not high-availability problems, we need to have at least 2 identical virtual machines which has Jenkins on them.
 
-Also we need to utilize Monitoring solution and Load Balancer type mechanism to make Jenkins installation _highly available_.
+Also, we need to utilize Monitoring solution and Load Balancer type mechanism to make Jenkins installation _highly available_.
 
-_Azure Container Instances_ _may_ solve availability and high availability problems at once.
+_Azure Container Instances_ may solve availability and high availability problems at once.
 
 ## Guideline to Install Jenkins on Azure Container Instances
 
