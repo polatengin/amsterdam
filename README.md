@@ -203,7 +203,7 @@ PASSWORD=`az acr credential show --resource-group amsterdamrg --name amsterdamac
 * [Optional] We can use already built image from [Guideline to build custom Jenkins image and run it on your machine](#guideline-to-build-custom-jenkins-image-and-run-it-on-your-machine) _or_ we can build Jenkins image here, with Azure Container Registry Build Docker Image service;
 
 ```bash
-az acr build --image jenkins:latest --registry amsterdamacr --file ./src/Dockerfile .
+az acr build --image jenkins:latest --registry amsterdamacr --file ./Dockerfile .
 ```
 
 * Last (_but not least_) we need to create an _Azure Container Instance_ from _Jenkins_ image in the _Azure Container Registry_
