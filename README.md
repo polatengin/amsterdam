@@ -26,7 +26,7 @@ _Jenkins Documentation_ can be found on the [Jenkins User Documentation](https:/
 
 * Jenkins is an open-source CI tool completely compiled and written in Java that originated as a subsidiary of Oracle created by Sun Microsystems.
 
-## Installing Jenkins on an existing Ubuntu machine
+## Guideline to Install Jenkins on an existing Ubuntu machine
 
 * Make sure that system has [Java JDK](https://openjdk.java.net/install/) on it
 
